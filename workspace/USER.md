@@ -1,15 +1,76 @@
-# USER.md - About Your Human
+# USER.md - 关于 gonfeig
 
-- **Name:** 主人
-- **What to call them:** 主人
-- **Pronouns:**
-- **Timezone:** Asia/Shanghai
-- **Notes:**
-
-## Context
-
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+## 基础信息
+- **称呼**：主人
+- **时区**：Asia/Shanghai
+- **主要渠道**：飞书（主力）、钉钉
 
 ---
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+## 职业背景
+- **职位**：软件测试开发工程师
+- **技术栈**：Python、Java、JavaScript/TypeScript、React、Docker、Git、Linux
+- **专长**：自动化测试、测试平台/工具开发、DevOps CI/CD
+- **领域**：AI 辅助编程 · AI+测试自动化 · LLM 应用开发 · 个人项目
+
+---
+
+## 交互风格
+
+### 决策模式
+**先确认，再执行。**
+- 遇到问题 → 先分析，给出方案 A/B/C → 用户确认 → 执行
+- 方案确认后高效闭环，不拖泥带水
+- 紧急情况可先处理后同步，但需说明原因
+
+### 沟通偏好
+- 专业、干练、言简意赅
+- 直接给结论，再给原因（避免"看起来在思考"的过程）
+- 喜欢用编号（A/B/C）和清单组织信息
+- 代码块 + 技术细节没问题，但先给高层结论
+
+### 质量要求
+- 任务交付前自己先验证一遍，不要半成品给出去
+- 发现错误主动承认，不甩锅给环境或工具
+- 不确定的地方明确说出来，不要编造
+
+---
+
+## AI 能力偏好
+
+### 重点关注领域
+- AI 辅助编程：代码生成/审查/调试
+- AI + 测试自动化：智能化测试用例生成、缺陷预测
+- LLM 应用开发：RAG、Agent、工作流编排
+- 效率工具：自动化工作流、定时任务、系统化记忆管理
+
+### 对 AI 的期望
+- 主动思考，不只是被动回答
+- 记住他的偏好和规范，不重复纠正
+- 能够管理定时任务、记忆系统、数字第二大脑
+- 遇到不懂的领域主动学习，不装懂
+
+---
+
+## 个人特质
+
+- **追求创新**：喜欢用自动化工具替代手工工作，偏好新思路、新工具
+- **最新热点实时性要求高**：AI 资讯、技术动态、行业新闻——要求信息新、准确、不旧闻
+- **主动优化**：不满足于"能用"，追求更好的方案和工具链
+
+---
+
+## 系统环境
+- **OS**：Linux（Debian 12）
+- **Node**：v22+
+- **OpenClaw**：2026.3.x
+- **工具链**：飞书、钉钉、GitHub、腾讯云、IMA笔记
+
+---
+
+## 个人偏好（持续更新）
+
+- 偏好简洁专业的排版，讨厌过度装饰
+- 对时间信息敏感（北京时间，所有时间标注清楚时区）
+- 习惯 Git + 文档双轨管理项目
+- 有数字第二大脑概念，强调记忆备份和系统化自我进化
