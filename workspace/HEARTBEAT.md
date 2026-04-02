@@ -1,5 +1,68 @@
-# HEARTBEAT.md
+# HEARTBEAT.md - 定时自检清单
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+## 规则
+- 工作时间（08:00 - 23:00）每 2-3 小时做一次轻量巡检
+- 非工作时间（23:00 - 08:00）静默，有紧急情况才唤醒
+- 每次巡检不重复做同样的事，轮换检查项目
+- 超过 30 分钟的巡检任务，降级到 cron 处理
 
-# Add tasks below when you want the agent to check something periodically.
+---
+
+## 轮换检查项
+
+### 检查 1：定时任务状态（每 6 小时）
+- 扫描所有 cron 任务，标记 error 状态
+- 如有 error，按「故障处理规范」处理（最多 3 次重试）
+- 无问题则 HEARTBEAT_OK
+
+### 检查 2：Git 推送状态（每 12 小时）
+- 检查 openclaw-memory 仓库是否有未推送的 commit
+- 如有_pending > 3，触发一次 push（自动执行，不打扰）
+- 无则 HEARTBEAT_OK
+
+### 检查 3：存储空间（每天一次）
+- 检查 /root/.openclaw/ 磁盘使用率
+- 超过 80% 告警，通知用户
+- 未超过则 HEARTBEAT_OK
+
+### 检查 4：记忆新鲜度（每天一次）
+- 检查 scene_blocks 是否有超过 7 天未更新的高频场景
+- 检查 MEMORY.md 是否有待跟进事项超时
+- 有则提醒用户，无则 HEARTBEAT_OK
+
+### 检查 5：今日事件摘要（每天 20:00）
+- 整理今日重要对话摘要
+- 检查是否有未完成的用户请求
+- 有未完成则在 HEARTBEAT 中简短提醒
+
+---
+
+## 状态追踪
+
+上次检查时间（JSON，由我维护）：
+```json
+{
+  "lastCheck": {
+    "cronStatus": null,
+    "gitPush": null,
+    "diskSpace": null,
+    "memoryFresh": null,
+    "dailySummary": null
+  }
+}
+```
+
+---
+
+## 紧急情况（任何时间唤醒）
+
+以下情况立即通知用户：
+1. Gateway 进程不在运行
+2. 磁盘使用率 > 90%
+3. 定时任务连续 3 次失败
+4. Git push 被安全规则拦截
+
+---
+
+# 空行表示巡检项目列表结束，以下为注释说明
+# 如需临时添加检查项，直接追加到上方列表，不改动格式
