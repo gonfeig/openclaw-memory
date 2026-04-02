@@ -1,0 +1,14 @@
+{"op":"create","entity":{"id":"gonfeig","type":"Person","properties":{"name":"gonfeig","role":"软件测试开发工程师","tech_stack":"Python/Java/JS/React/Docker/Git/Linux","timezone":"Asia/Shanghai","channels":"飞书/钉钉"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"create","entity":{"id":"openclaw-memory","type":"Project","properties":{"name":"openclaw-memory","status":"active","goal":"Git版本化记忆系统，多层存储+定期备份","repo":"https://github.com/gonfeig/openclaw-memory"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_project","to":"openclaw-memory"}
+{"op":"create","entity":{"id":"git-memory-arch","type":"Project","properties":{"name":"Git Memory架构","status":"deployed","owner":"gonfeig","branches":"main/sessions/weekly/archive"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"openclaw-memory","rel":"has_component","to":"git-memory-arch"}
+{"op":"create","entity":{"id":"cron-tasks","type":"Project","properties":{"name":"定时任务体系","status":"active","count":9},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"git-memory-arch","rel":"has_related","to":"cron-tasks"}
+{"op":"create","entity":{"id":"ima-notes","type":"Project","properties":{"name":"IMA笔记系统","status":"active","notes_count":3},"created":"2026-04-02T00:00:00Z"}}
+{"op":"create","entity":{"id":"nba-harden","type":"Topic","properties":{"name":"NBA-詹姆斯·哈登","status":"active","team":"克利夫兰骑士","data_source":"ESPN+腾讯体育"},"created":"2026-03-28T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"follows","to":"nba-harden"}
+{"op":"create","entity":{"id":"templates","type":"Project","properties":{"name":"AI模板体系","status":"deployed","files":"USER/SOUL/AGENTS/IDENTITY/HEARTBEAT/TOOLS"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_project","to":"templates"}
+{"op":"create","entity":{"id":"self-improving","type":"Capability","properties":{"name":"自我进化能力","components":"每日蒸馏/热度衰减/主动关联/记忆归档"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_capability","to":"self-improving"}

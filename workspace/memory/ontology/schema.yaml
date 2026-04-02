@@ -1,0 +1,101 @@
+# Ontology Schema for gonfeig's Digital Second Brain
+
+types:
+  Person:
+    required: [name]
+    properties:
+      name: { type: string, required: true }
+      role: { type: string }
+      tech_stack: { type: string }
+      timezone: { type: string }
+      channels: { type: string }
+
+  Project:
+    required: [name, status]
+    properties:
+      name: { type: string, required: true }
+      status: { type: enum, values: [active, deployed, completed, archived], required: true }
+      goal: { type: string }
+      owner: { type: string }
+      repo: { type: string }
+
+  Capability:
+    required: [name]
+    properties:
+      name: { type: string, required: true }
+      components: { type: string }
+      status: { type: enum, values: [active, developing, planned] }
+
+  Topic:
+    required: [name]
+    properties:
+      name: { type: string, required: true }
+      status: { type: enum, values: [active, archived] }
+      team: { type: string }
+      data_source: { type: string }
+
+  Task:
+    required: [title, status]
+    properties:
+      title: { type: string, required: true }
+      status: { type: enum, values: [open, in_progress, blocked, done], required: true }
+      priority: { type: enum, values: [high, medium, low] }
+      due: { type: date }
+      source: { type: string }
+
+  Decision:
+    required: [date, description]
+    properties:
+      date: { type: date, required: true }
+      description: { type: string, required: true }
+      outcome: { type: string }
+      project: { type: string }
+
+  Memory:
+    required: [date, type]
+    properties:
+      date: { type: date, required: true }
+      type: { type: enum, values: [daily, weekly, monthly, milestone], required: true }
+      topics: { type: string }
+      decisions: { type: string }
+
+relations:
+  has_project:
+    from_types: [Person, Capability]
+    to_types: [Project]
+    cardinality: many_to_many
+
+  has_capability:
+    from_types: [Person]
+    to_types: [Capability]
+    cardinality: many_to_many
+
+  follows:
+    from_types: [Person]
+    to_types: [Topic]
+    cardinality: many_to_many
+
+  has_related:
+    from_types: [Project, Capability]
+    to_types: [Project, Capability]
+    cardinality: many_to_many
+
+  has_component:
+    from_types: [Project]
+    to_types: [Project, Task]
+    cardinality: one_to_many
+
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+
+  blocks:
+    from_types: [Task]
+    to_types: [Task]
+    acyclic: true
+
+  created_from:
+    from_types: [Task, Decision, Memory]
+    to_types: [Memory, Decision]
+    cardinality: many_to_one
