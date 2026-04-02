@@ -1,0 +1,57 @@
+# Git directory
+.git/
+
+# Raw session logs (huge, committed separately via dedicated branches)
+agents/
+browser-existing-session/
+canvas/
+completions/
+credentials/
+cron/
+devices/
+exec-approvals.json
+extensions/
+feishu/
+identity/
+logs/
+media/
+# memory-tdai (selective - only scene_blocks)
+memory-tdai/conversations/
+memory-tdai/records/
+memory-tdai/vectors.db*
+memory-tdai/persona.md
+!memory-tdai/scene_blocks/
+openclaw.json
+openclaw.json.bak
+openclaw.json.bak.*
+qqbot/
+runtime/
+skills-cache/
+tasks/
+tmp/
+wechat/
+wecom/
+workspace/skills/
+workspace/memory-git-backup/
+
+# Temporary and cache files
+*.tmp
+*.log
+*.swp
+*~
+*.pem
+*.key
+openclaw*.log
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Large media files
+*.mp4
+*.mov
+*.zip
+*.tar
+*.tar.gz
+*.7z
