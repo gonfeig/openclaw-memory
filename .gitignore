@@ -32,7 +32,10 @@ tmp/
 wechat/
 wecom/
 workspace/skills/
-workspace/memory-git-backup/
+# memory-git-backup (selective - only scripts, sessions are excluded)
+workspace/memory-git-backup/sessions/
+workspace/memory-git-backup/*.lock
+!workspace/memory-git-backup/scripts/
 
 # Temporary and cache files
 *.tmp
