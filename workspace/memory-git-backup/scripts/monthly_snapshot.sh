@@ -6,7 +6,7 @@
 REPO="/root/.openclaw"
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
-MONTHLY_TAG="v:${YEAR}-${MONTH}-monthly"
+MONTHLY_TAG="v-${YEAR}-${MONTH}-monthly"
 ARCHIVE_BRANCH="archive/${YEAR}-${MONTH}"
 
 cd "$REPO"
