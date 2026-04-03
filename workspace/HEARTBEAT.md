@@ -70,14 +70,14 @@
 ```json
 {
   "lastCheck": {
-    "cronStatus": null,
-    "gitPush": null,
-    "diskSpace": null,
+    "cronStatus": "2026-04-03T03:00:00Z",
+    "gitPush": "2026-04-03T03:00:00Z",
+    "diskSpace": "2026-04-03T03:00:00Z",
     "memoryFresh": null,
-    "dailySummary": null
+    "dailySummary": "2026-04-03T09:30:00Z"
   },
   "suggestions": {
-    "lastSuggestion": null,
+    "lastSuggestion": "2026-04-03T00:00:00Z",
     "pendingFollowups": []
   }
 }

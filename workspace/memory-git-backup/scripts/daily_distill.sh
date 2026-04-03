@@ -69,10 +69,23 @@ for block in "$SCENE_DIR"/*.md; do
     [ -f "$block" ] || continue
     filename=$(basename "$block" .md)
 
-    # 检查是否在 KEY_TOPICS 中（今日提及）
+    # 热度衰减 + 增量机制
+    # 每次衰减 heat * 0.05，最低为 1（永不消失）
+    current_heat=$(grep "^heat: " "$block" | awk '{print $2}')
+    if [ -n "$current_heat" ] && [ "$current_heat" -gt 1 ]; then
+        decay=$(python3 -c "print(max(1, int($current_heat * 0.95)))")
+        sed -i "s/^heat: $current_heat$/heat: $decay/" "$block" 2>/dev/null
+    fi
+
+    # 如果今日提及该场景，热度 +2（比之前 +1 更激进，避免被衰减吞没）
     if echo "$KEY_TOPICS" | grep -q "${filename}"; then
-        # 热度 +1（通过 sed 调整 META 中的 heat 值）
-        sed -i "s/^heat: \([0-9]*\)$/heat: \1+1/e" "$block" 2>/dev/null || true
+        sed -i "s/^heat: \([0-9]*\)$/heat: \1+2/e" "$block" 2>/dev/null || true
+    fi
+
+    # 如果热度超过 40，上限锁死为 40（防止无限增长）
+    new_heat=$(grep "^heat: " "$block" | awk '{print $2}')
+    if [ -n "$new_heat" ] && [ "$new_heat" -gt 40 ]; then
+        sed -i "s/^heat: $new_heat$/heat: 40/" "$block" 2>/dev/null
     fi
 
     # 检查最后更新时间（超30天未更新则标记）

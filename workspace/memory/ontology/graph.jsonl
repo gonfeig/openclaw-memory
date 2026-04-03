@@ -12,3 +12,18 @@
 {"op":"relate","from":"gonfeig","rel":"has_project","to":"templates"}
 {"op":"create","entity":{"id":"self-improving","type":"Capability","properties":{"name":"自我进化能力","components":"每日蒸馏/热度衰减/主动关联/记忆归档"},"created":"2026-04-02T00:00:00Z"}}
 {"op":"relate","from":"gonfeig","rel":"has_capability","to":"self-improving"}
+{"op":"create","entity":{"id":"cron-fault-fix-20260403","type":"Decision","properties":{"date":"2026-04-03","description":"修复cron任务飞书announce失败：sessionTarget从isolated改为current，添加bestEffort，内部任务改为mode:none","outcome":"早安问候发送成功（delivered:true）"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"create","entity":{"id":"qingming-fix-20260403","type":"Decision","properties":{"date":"2026-04-03","description":"修复早安问候清明节天数硬编码（7天→动态计算）","outcome":"prompt改为AI根据{{date}}动态计算"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"create","entity":{"id":"system-design-review-20260403","type":"Decision","properties":{"date":"2026-04-03","description":"完成记忆系统自我检视，生成DESIGN.md，识别4个待改进项：ontology空、热 decay缺失、MEMORY未同步、HEARTBEAT过期","outcome":"DESIGN.md生成，4项待改进"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"create","entity":{"id":"memory-system","type":"Capability","properties":{"name":"记忆系统","components":"六层记忆/scene_blocks/tdai/Git备份/IMA笔记/Ontology","status":"active"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_capability","to":"memory-system"}
+{"op":"create","entity":{"id":"cron-task-system","type":"Capability","properties":{"name":"定时任务体系","components":"11个cron任务/sessionTarget:current/bestEffort","status":"active"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_capability","to":"cron-task-system"}
+{"op":"create","entity":{"id":"digital-second-brain","type":"Project","properties":{"name":"数字第二大脑","status":"active","goal":"六层记忆体系+自我进化","owner":"gonfeig"},"created":"2026-04-02T00:00:00Z"}}
+{"op":"relate","from":"gonfeig","rel":"has_project","to":"digital-second-brain"}
+{"op":"relate","from":"digital-second-brain","rel":"has_component","to":"memory-system"}
+{"op":"relate","from":"digital-second-brain","rel":"has_component","to":"cron-task-system"}
+{"op":"create","entity":{"id":"self-evolution","type":"Capability","properties":{"name":"自我进化能力","components":"热度衰减机制/每日蒸馏/MEMORY同步/DESIGN自审","status":"developing"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"relate","from":"memory-system","rel":"has_related","to":"self-evolution"}
+{"op":"create","entity":{"id":"heat-decay-mechanism","type":"Capability","properties":{"name":"热度衰减机制","components":"每晚衰减5%/热度上限40/最低1/当日提及+2","status":"active"},"created":"2026-04-03T00:00:00Z"}}
+{"op":"relate","from":"self-evolution","rel":"has_component","to":"heat-decay-mechanism"}

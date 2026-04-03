@@ -163,6 +163,16 @@ GitHub PAT 存储在 `~/.git-credentials`（git credential helper），脚本不
 ## 重要决策记录
 
 ### 2026-04-02（重大更新）
+### 2026-04-03（定时任务故障修复）
+- 根因：cron 任务 `sessionTarget: "isolated"` 无法访问飞书 announce 通道
+- 修复：所有 11 个 cron 任务改为 `sessionTarget: "current"`，复用调用者 channel 上下文
+- 添加 `bestEffort: true` 到所有 announce delivery，announce 失败不再标记 error
+- 内部任务（Git commit、记忆蒸馏等）改为 `mode: none`，避免刷屏
+- 修复早安问候 prompt 清明节天数硬编码（改为 AI 动态计算）
+- 发现 gateway 对 `cron run` 有 sessionTarget 回写行为，但 scheduled trigger 不受影响
+- 飞书 delivery channel 从 `last` 改为显式 `feishu`
+
+
 - 确立 Git Memory 架构（GitHub + 本地多层存储 + 定期备份）
 - 确立行动授权等级（L0-L4）
 - 确立工具调用原则（主动、有目标性、不乱调）
@@ -185,4 +195,4 @@ GitHub PAT 存储在 `~/.git-credentials`（git credential helper），脚本不
 ## NBA 动态（持续关注）
 - **詹姆斯·哈登**: 克利夫兰骑士队（2026-03-28 从快船转会）
 - 数据源：ESPN（比赛/排名）+ 腾讯体育（新闻）
-- 每次推送需验证数据真实性，不确定的内容不编造
+- 每次推送需验证数据真实性；清明节天数由AI根据{{date}}动态计算，不确定的内容不编造
