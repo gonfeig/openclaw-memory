@@ -70,14 +70,14 @@
 ```json
 {
   "lastCheck": {
-    "cronStatus": "2026-04-03T09:34:00Z",
-    "gitPush": "2026-04-03T09:34:00Z",
-    "diskSpace": "2026-04-03T09:34:00Z",
-    "memoryFresh": "2026-04-03T09:34:00Z",
-    "dailySummary": "2026-04-03T09:30:00Z"
+    "cronStatus": "2026-04-04T00:08:00Z",
+    "gitPush": "2026-04-04T00:08:00Z",
+    "diskSpace": "2026-04-04T00:08:00Z",
+    "memoryFresh": "2026-04-03T11:34:00Z",
+    "dailySummary": "2026-04-03T14:04:00Z"
   },
   "suggestions": {
-    "lastSuggestion": "2026-04-03T00:00:00Z",
+    "lastSuggestion": null,
     "pendingFollowups": []
   }
 }
