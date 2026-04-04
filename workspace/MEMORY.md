@@ -194,6 +194,14 @@ GitHub PAT 存储在 `~/.git-credentials`（git credential helper），脚本不
 
 ---
 
+## 教训（持续更新）
+
+### 2026-04-05
+- **jobs.json 不能直接手动修改**：gateway 重启时会用内存中的旧配置覆盖文件，手动改的文件会被还原。正确做法：用 `openclaw cron edit --session current` 修改运行中配置，同时更新 jobs.json 保持一致。
+- **gateway 重启后必须主动通知**：这是 gonfeig 明确的规则，执行 `openclaw gateway restart` 后必须确认重启完成并主动发消息告知，不得无声结束。已创建脚本 `/root/.openclaw/workspace/scripts/gateway-restart.sh` 处理此事。
+
+---
+
 ## 未完成 / 待跟进
 - [ ] Windows 宿主机 + Ubuntu 虚拟机 + Docker + OpenClaw 安装方案（用户提过，未完成）
 

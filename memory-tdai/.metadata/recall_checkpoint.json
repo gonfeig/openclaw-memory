@@ -1,0 +1,184 @@
+{
+  "last_captured_timestamp": 1775318803614,
+  "total_processed": 1702,
+  "last_persona_at": 1665,
+  "last_persona_time": "2026-04-04T15:24:34.394Z",
+  "request_persona_update": false,
+  "persona_update_reason": "",
+  "memories_since_last_persona": 42,
+  "scenes_processed": 74,
+  "runner_states": {
+    "agent:main:feishu:direct:ou_5ababf78dba78d9324d26cd8dbc7a3db": {
+      "last_captured_timestamp": 1775318803614,
+      "last_l1_cursor": 1775318690802,
+      "last_scene_name": "AI在和gonfeig验证cron任务修复是否生效"
+    },
+    "agent:main:cron:82bba9d8-2f60-476e-924b-8195c7148b10": {
+      "last_captured_timestamp": 1775257298547,
+      "last_l1_cursor": 1775257298547,
+      "last_scene_name": "AI作为晨间资讯主播，为主人播报每日晨间简报"
+    },
+    "agent:main:cron:20c8443c-4cbf-4ef0-8d4e-a7b313a8302d": {
+      "last_captured_timestamp": 1775261123718,
+      "last_l1_cursor": 1775261123718,
+      "last_scene_name": "AI作为NBA篮球资讯主播为詹姆斯·哈登球迷提供每日资讯速递"
+    },
+    "agent:main:qqbot:direct:e6a43c185a0c889405972a1bddc20f86": {
+      "last_captured_timestamp": 1775011753155,
+      "last_l1_cursor": 1775011753155,
+      "last_scene_name": "AI在和用户测试QQ与飞书通道连接状态"
+    },
+    "agent:main:cron:4c00cdc1-c146-40bb-b080-9b04f59180de": {
+      "last_captured_timestamp": 1775279165434,
+      "last_l1_cursor": 1775279165434,
+      "last_scene_name": "AI（每日复盘助手）执行每日对话回顾与记忆同步任务"
+    },
+    "agent:main:cron:b0bb7220-8c70-4d8d-8be9-6eef18c19cb4": {
+      "last_captured_timestamp": 1775318712576,
+      "last_l1_cursor": 1775318712576,
+      "last_scene_name": "AI在为用户执行Git会话备份例行任务"
+    },
+    "agent:main:main": {
+      "last_captured_timestamp": 1775313555811,
+      "last_l1_cursor": 1775313555811,
+      "last_scene_name": "AI进行系统心跳检测与定时任务状态监控"
+    },
+    "agent:main:cron:fb5dce6f-79c0-4730-aeb0-524a4696ae9f": {
+      "last_captured_timestamp": 1775242933391,
+      "last_l1_cursor": 1775242933391,
+      "last_scene_name": "AI 自动执行 Sessions 会话清理定时任务"
+    },
+    "agent:main:cron:dadab962-97ef-4417-829f-2c072ac3dfef": {
+      "last_captured_timestamp": 1775253788684,
+      "last_l1_cursor": 1775253788684,
+      "last_scene_name": "AI执行定时浏览器进程清理任务"
+    },
+    "agent:main:cron:f5eb2f71-e081-4782-ba2c-cde9973134f5": {
+      "last_captured_timestamp": 1775177741538,
+      "last_l1_cursor": 1775177741538,
+      "last_scene_name": "AI系统执行每月记忆快照自动化定时任务"
+    },
+    "agent:main:cron:c3dc2b66-f873-4541-9b2e-086bef2704cb": {
+      "last_captured_timestamp": 1775178215007,
+      "last_l1_cursor": 0,
+      "last_scene_name": ""
+    },
+    "agent:main:cron:1578ba4d-dd1b-4e2d-aeba-4f6cea565afa": {
+      "last_captured_timestamp": 1775279206806,
+      "last_l1_cursor": 1775279206806,
+      "last_scene_name": "AI定时执行每日记忆蒸馏备份任务"
+    }
+  },
+  "pipeline_states": {
+    "agent:main:feishu:direct:ou_5ababf78dba78d9324d26cd8dbc7a3db": {
+      "conversation_count": 1,
+      "last_extraction_time": "2026-04-04T16:07:44.815Z",
+      "last_extraction_updated_time": "2026-04-04T15:55:44.015Z",
+      "last_active_time": 1775318813454,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T16:07:44.815Z"
+    },
+    "agent:main:cron:82bba9d8-2f60-476e-924b-8195c7148b10": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T08:09:44.024Z",
+      "last_extraction_updated_time": "2026-04-03T23:07:33.568Z",
+      "last_active_time": 1775257445568,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T08:09:44.024Z"
+    },
+    "agent:main:cron:20c8443c-4cbf-4ef0-8d4e-a7b313a8302d": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T08:08:54.294Z",
+      "last_extraction_updated_time": "2026-04-03T00:50:45.803Z",
+      "last_active_time": 1775261144941,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T08:08:54.294Z"
+    },
+    "agent:main:qqbot:direct:e6a43c185a0c889405972a1bddc20f86": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-01T13:33:31.085Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775011771899,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-01T13:33:31.085Z"
+    },
+    "agent:main:cron:4c00cdc1-c146-40bb-b080-9b04f59180de": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T08:09:10.273Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775279173664,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T08:09:10.273Z"
+    },
+    "agent:main:cron:b0bb7220-8c70-4d8d-8be9-6eef18c19cb4": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T16:08:03.196Z",
+      "last_extraction_updated_time": "2026-04-04T15:51:59.556Z",
+      "last_active_time": 1775318716115,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T16:08:03.196Z"
+    },
+    "agent:main:main": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T14:41:57.200Z",
+      "last_extraction_updated_time": "2026-04-02T23:34:28.095Z",
+      "last_active_time": 1775313559990,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 0,
+      "l2_last_extraction_time": "2026-04-04T14:41:57.200Z"
+    },
+    "agent:main:cron:fb5dce6f-79c0-4730-aeb0-524a4696ae9f": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-03T20:35:00.218Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775242936681,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 4,
+      "l2_last_extraction_time": "2026-04-03T20:35:00.218Z"
+    },
+    "agent:main:cron:dadab962-97ef-4417-829f-2c072ac3dfef": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T08:36:27.029Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775253792519,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 4,
+      "l2_last_extraction_time": "2026-04-04T08:36:27.029Z"
+    },
+    "agent:main:cron:f5eb2f71-e081-4782-ba2c-cde9973134f5": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-03T00:57:47.198Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775177757714,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 2,
+      "l2_last_extraction_time": "2026-04-03T00:57:47.198Z"
+    },
+    "agent:main:cron:c3dc2b66-f873-4541-9b2e-086bef2704cb": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-03T20:07:02.237Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775178226493,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 1,
+      "l2_last_extraction_time": "2026-04-03T20:07:02.237Z"
+    },
+    "agent:main:cron:1578ba4d-dd1b-4e2d-aeba-4f6cea565afa": {
+      "conversation_count": 0,
+      "last_extraction_time": "2026-04-04T08:09:42.888Z",
+      "last_extraction_updated_time": "",
+      "last_active_time": 1775279215290,
+      "l2_pending_l1_count": 0,
+      "warmup_threshold": 4,
+      "l2_last_extraction_time": "2026-04-04T08:09:42.888Z"
+    }
+  },
+  "l0_conversations_count": 741,
+  "total_memories_extracted": 131
+}

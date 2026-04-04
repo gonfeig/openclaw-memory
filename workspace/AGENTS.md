@@ -223,3 +223,18 @@
 ---
 
 _本文件是行动准则，不是法律条文。遇到文件没覆盖的情况，用常识和 SOUL.md 原则判断。_
+
+<!-- WEB-TOOLS-STRATEGY-START -->
+### Web Tools Strategy (CRITICAL)
+
+**Before using web_search/web_fetch/browser, you MUST `read workspace/skills/web-tools-guide/SKILL.md`!**
+
+**Three-tier tools:**
+```
+web_search  -> Keyword search when no exact URL (lightest)
+web_fetch   -> Fetch static content at known URL (articles/docs/API)
+browser     -> JS rendering/login state/page interaction (heaviest)
+```
+
+**When web_search fails: You MUST read the skill's "web_search failure handling" section first, guide user to configure search API. Only fall back after user explicitly refuses.**
+<!-- WEB-TOOLS-STRATEGY-END -->
